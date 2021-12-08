@@ -1,0 +1,14 @@
+{
+	"users": [
+		{
+			"name": "Falco",
+			"code": "87167160",
+			"balance": 100.0
+		},
+		{
+			"name": "Niels",
+			"code": "12345678",
+			"balance": 100.0
+		}
+	]
+}
