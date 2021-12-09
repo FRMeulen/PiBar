@@ -13,6 +13,9 @@ class UserValidator:
     def validate(self):
         for user in self.users:
             if user.code == self.user_code:
+                print('Hallo', user.name + '!')
+                print('Je hebt nog ', user.balance, 'beschikbaar!')
                 return user
 
-        return 'Error'
+        print('Error: User code invalid!')
+        quit()
