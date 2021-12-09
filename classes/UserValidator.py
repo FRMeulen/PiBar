@@ -8,14 +8,10 @@ class UserValidator:
         self.user_code = user_code
         f = open(self.filePath)
         str_users = f.read()
-        self.json = json.loads(str_users, object_hook = lambda d: SimpleNamespace(**d))
-
-    def test(self):
-        print('Type: ', type(self.users))
-        print(self.json.users[0])
+        self.users = json.loads(str_users, object_hook = lambda d: SimpleNamespace(**d))
 
     def validate(self):
-        for user in self.json.users:
+        for user in self.users:
             if user.code == self.user_code:
                 return user
 
