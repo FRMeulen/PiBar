@@ -1,3 +1,5 @@
+from classes.User import UserSaver
+
 class TransactionHandler:
     def __init__(self, user, drink):
         self.user = user
@@ -14,3 +16,7 @@ class TransactionHandler:
         print('Je hebt', self.drink.name, 'gekocht voor', str(self.drink.price) + '.')
         print('Er staat nog', self.user.balance, 'op je kaart.')
         # ToDo: Log the transaction here
+
+        saver = UserSaver(self.user)
+        saver.update_in_memory()
+        saver.save()

@@ -19,7 +19,7 @@ class DrinkValidator:
     def validate(self):
         for drink in self.drinks:
             if drink.code == self.drink_code:
-                print(drink.name + ',', 'goede keuze!')
+                print(f'{drink.name}, goede keuze!')
                 return drink
 
         return 0

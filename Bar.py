@@ -11,7 +11,6 @@ def reset_app(message):
     print('Restart over 5 seconden...')
     time.sleep(5)
     clear_console()
-    run_bar()
 
 def run_bar():
     user_input = UserInput()
@@ -36,4 +35,5 @@ def run_bar():
         reset_app('Error: Niet genoeg saldo!')
 
 clear_console()
-run_bar()
+while True:
+    run_bar()
