@@ -52,4 +52,5 @@ class UserSaver:
             print(user.to_json())
 
     def save(self):
-        print('todo')
+        with open(self.filePath, 'w') as outputFile:
+            outputFile.write(json.dumps(self.users, default=lambda d: d.__dict__, indent=4))
