@@ -1,6 +1,12 @@
 import json
 from types import SimpleNamespace
 
+class UserInput:
+    def get_user(self):
+        print('Hallo, scan je kaart: ', end='')
+        self.user_code = input()
+        return self.user_code
+
 class UserValidator:
     filePath = './res/Users.json'
 
@@ -17,5 +23,4 @@ class UserValidator:
                 print('Je hebt nog ', user.balance, 'beschikbaar!')
                 return user
 
-        print('Error: User code invalid!')
-        quit()
+        return 0
