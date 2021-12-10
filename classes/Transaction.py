@@ -13,8 +13,8 @@ class TransactionHandler:
 
     def handle(self):
         self.user.balance -= self.drink.price
-        print('Je hebt', self.drink.name, 'gekocht voor', str(self.drink.price) + '.')
-        print('Er staat nog', self.user.balance, 'op je kaart.')
+        print(f'Je hebt {self.drink.name} gekocht voor {str(self.drink.price)}.')
+        print(f'Er staat nog {self.user.balance} op je kaart.')
         # ToDo: Log the transaction here
 
         saver = UserSaver(self.user)
