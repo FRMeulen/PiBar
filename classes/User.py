@@ -29,7 +29,7 @@ class UserValidator:
         for user in self.users:
             if user.code == self.user_code:
                 print(f'Hallo, {user.name}!')
-                print(f'Je hebt nog {user.balance} beschikbaar!')
+                print(f'Je hebt nog €{user.balance} beschikbaar!')
                 return user
 
         return 0
