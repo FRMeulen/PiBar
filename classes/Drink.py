@@ -1,7 +1,13 @@
 import json
 from types import SimpleNamespace
 
-class DrinksValidator:
+class DrinkInput:
+    def get_drink(self):
+        print('Scan je drankje: ', end='')
+        self.drink_code = input()
+        return self.drink_code
+
+class DrinkValidator:
     filePath = './res/Drinks.json'
 
     def __init__(self, drink_code):
@@ -16,5 +22,4 @@ class DrinksValidator:
                 print(drink.name + ',', 'goede keuze!')
                 return drink
 
-        print('Error: Drink code invalid!')
-        quit()
+        return 0
